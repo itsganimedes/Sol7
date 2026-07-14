@@ -1,0 +1,433 @@
+/* --- VARIABLES DE DISEÑO --- */
+:root {
+    --bg-principal: #ffffff;
+    --bg-secundario: #f8f9fa;
+    --color-primario: #ff9f1c;
+    --color-secundario: #ffbf69;
+    --texto-claro: #1e1e24;
+    --texto-mutado: #5a5a62;
+    --borde: #e2e2e9;
+}
+
+/* --- ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-principal);
+    color: var(--texto-claro);
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #111115;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- HEADER PRINCIPAL --- */
+.header-principal {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--borde);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px 20px;
+}
+
+.contenedor-header {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    max-height: 85px;
+    width: auto;
+}
+
+.nombre-academia {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: #111115;
+    letter-spacing: -0.5px;
+}
+
+.btn-cta-nav {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.btn-cta-nav:hover {
+    background-color: var(--color-primario);
+    color: #ffffff;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.tag-alerta {
+    background-color: rgba(255, 159, 28, 0.08);
+    color: var(--color-primario);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 159, 28, 0.25);
+    letter-spacing: 0.5px;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: var(--color-primario);
+}
+
+.bajada-hero {
+    font-size: 1.1rem;
+    color: var(--texto-mutado);
+    margin-bottom: 30px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-clave {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 600px) {
+    .info-clave {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.tarjeta-clave {
+    background-color: var(--bg-secundario);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--borde);
+}
+
+.tarjeta-clave h4 {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    color: var(--color-primario);
+}
+
+.tarjeta-clave p {
+    font-size: 0.95rem;
+    color: var(--texto-claro);
+    line-height: 1.5;
+}
+
+/* --- BOTONES DE ACCIÓN --- */
+.btn-cta {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 159, 28, 0.25);
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+    background-color: #e68a00;
+    box-shadow: 0 6px 20px rgba(255, 159, 28, 0.4);
+}
+
+/* --- SECCIÓN CAMADA --- */
+.seccion-camada {
+    background-color: var(--bg-secundario);
+    padding: 30px;
+    border-radius: 16px;
+    margin: 40px 0;
+    border: 1px solid var(--borde);
+}
+
+.seccion-camada h2 {
+    color: #111115;
+    margin-bottom: 15px;
+}
+
+/* --- GRID SISTEMA --- */
+.grid-sistema {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 40px 0;
+}
+
+@media (min-width: 600px) {
+    .grid-sistema {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.bloque-sistema {
+    background-color: var(--bg-secundario);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid var(--borde);
+}
+
+.bloque-sistema h3 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--borde);
+    padding-bottom: 10px;
+}
+
+.bloque-sistema ul {
+    list-style: none;
+}
+
+.bloque-sistema ul li {
+    margin-bottom: 12px;
+    color: var(--texto-mutado);
+    font-size: 0.95rem;
+}
+
+.bloque-sistema ul li strong {
+    color: var(--texto-claro);
+}
+
+/* --- SECCIÓN INSIGNIAS --- */
+.seccion-insignias {
+    margin: 50px 0;
+}
+
+.seccion-insignias h2 {
+    margin-bottom: 10px;
+}
+
+.bajada-seccion {
+    color: var(--texto-mutado);
+    margin-bottom: 30px;
+}
+
+.contenedor-insignias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.insignia-card {
+    background-color: var(--bg-secundario);
+    padding: 20px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--borde);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.insignia-card:hover {
+    border-color: var(--color-primario);
+    transform: scale(1.03);
+    background-color: #ffffff;
+}
+
+.insignia-icono {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.insignia-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+/* Tooltip */
+.insignia-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: 200px;
+    background-color: #1e1e24;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid var(--color-primario);
+    font-size: 0.8rem;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s, visibility 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.insignia-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--color-primario) transparent transparent transparent;
+}
+
+.insignia-card:hover .insignia-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Visor inferior */
+.insignia-detalle {
+    margin-top: 20px;
+    background-color: var(--bg-secundario);
+    padding: 15px;
+    border-radius: 8px;
+    border-top: 4px solid var(--color-primario);
+    border-left: 1px solid var(--borde);
+    border-right: 1px solid var(--borde);
+    border-bottom: 1px solid var(--borde);
+}
+
+/* --- FOGÓN Y POLÍTICAS --- */
+.destacado-fogon {
+    background: linear-gradient(180deg, #fffcf6 0%, #fff3e0 100%);
+    border: 1px solid var(--color-secundario);
+    padding: 30px;
+    border-radius: 16px;
+    margin: 40px 0;
+}
+
+.destacado-fogon h2 {
+    color: #c66900;
+}
+
+.destacado-fogon p {
+    color: #5d4037;
+}
+
+.destacado-fogon span {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.politicas {
+    background-color: var(--bg-principal);
+    border: 1px dashed var(--borde);
+    padding: 25px;
+    border-radius: 16px;
+    margin: 40px 0;
+}
+
+.politicas h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #d93838;
+}
+
+.politicas p {
+    font-size: 0.9rem;
+    color: var(--texto-mutado);
+    margin-bottom: 10px;
+}
+
+/* --- SECCIÓN CIERRE --- */
+.cierre {
+    padding: 40px 0;
+}
+
+.cierre p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* --- FOOTER SIMPLE --- */
+.footer-principal {
+    background-color: var(--bg-secundario);
+    border-top: 1px solid var(--borde);
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+.contenedor-footer {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.marca-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-footer {
+    max-height: 95px;
+    width: auto;
+}
+
+.marca-footer span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #111115;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: var(--texto-mutado);
+}
