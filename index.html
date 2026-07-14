@@ -17,6 +17,15 @@
                 <img src="img/Logo_Sol7.png" alt="Logo Sol 7" class="logo">
                 <span class="nombre-academia">Sol Séptima</span>
             </div>
+            
+            <!-- NUEVO: Menú de navegación principal -->
+            <nav class="nav-principal">
+                <a href="#clases">Clases</a>
+                <a href="#insignias">Insignias</a>
+                <a href="#precios">Precios</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
             <a href="https://wa.me/2645128508?text=Hola!%20Quiero%20inscribirme%20en%20Sol%20Séptima." class="btn-cta-nav" target="_blank">Escribinos</a>
         </div>
     </header>
@@ -25,8 +34,8 @@
 
         <section class="hero">
             <div class="tag-alerta">🎸 INSCRIPCIONES ABIERTAS</div>
-            <h1>Aprendé guitarra en un proceso <span>inolvidable.</span></h1>
-            <p class="bajada-hero">Te invitamos a aprender a tocar la guitarra en un proceso divertido. Estableceremos objetivos desde el primer día para que la frustración no sea un problema.</p>
+            <h1>Aprendé guitarra en un proceso <span>hermoso.</span></h1>
+            <p class="bajada-hero">Te invitamos a aprender a tocar la guitarra de una forma estructurada. Estableceremos objetivos desde el primer día para que la frustración no sea un problema.</p>
             
             <div class="info-clave">
                 <div class="tarjeta-clave">
@@ -39,10 +48,11 @@
                 </div>
             </div>
 
-            <a href="https://wa.me/2645128508?text=Hola!%20Quiero%20inscribirme%20en%20Sol%20Séptima."class="btn-cta" target="_blank">🎯 Quiero empezar ahora</a>
+            <a href="https://wa.me/2645128508?text=Hola!%20Quiero%20inscribirme%20en%20Sol%20Séptima." class="btn-cta" target="_blank">🎯 Quiero empezar ahora</a>
         </section>
 
-        <section class="seccion-camada">
+        <!-- Agregado id="clases" para el anclaje del nav -->
+        <section class="seccion-camada" id="clases">
             <h2>¿Cómo son las clases?</h2>
             <p>Cuando ingreses, establecemos un plan para vos, definimos metas mensuales y caminamos juntos.<strong> Podés cursar todos los meses que quieras y avanzar a tu propio ritmo</strong>, pero cada mes arranca con objetivos claros, una estructura fija y dinámicas grupales.</p>
         </section>
@@ -67,7 +77,8 @@
             </div>
         </section>
 
-        <section class="seccion-insignias">
+        <!-- Agregado id="insignias" para el anclaje -->
+        <section class="seccion-insignias" id="insignias">
             <h2>🏅 Gamificación: Tu Progreso Real</h2>
             <p class="bajada-seccion">Pasá el mouse para una vista rápida o hacé clic para ver el detalle:</p>
 
@@ -139,6 +150,57 @@
             <p style="margin-top: 10px;">Al finalizar etapas, juntamos a la comunidad de la camada en un encuentro grupal al aire libre. Un espacio relajado para compartir lo aprendido, tocar juntos, tomar algo y vivir la música en comunidad. ¡Aprender no es un camino solitario!</p>
         </section>
 
+        <!-- Sección de Precio Actual -->
+        <section class="seccion-precios" id="precios">
+            <h2>Tarifa e Inversión</h2>
+            <p class="bajada-seccion">Sin sorpresas ni contratos raros. Pagás por mes y avanzás a tu ritmo.</p>
+            
+            <div class="contenedor-precios">
+                <div class="tarjeta-precio">
+                    <span class="badge-tarjeta">PLAN COMPLETO</span>
+                    <h3>Pase Mensual</h3>
+                    <p class="cant-clases"><strong>8 CLASES</strong> MAX</p>
+                    <div class="precio-grande">$29.999 <span class="unidad">/ mes</span></div>
+                    <div class="precio-clase">Equivale a solo <strong>$3.000</strong> por clase</div>
+                    <p class="precio-nota">Calculado en base a una frecuencia recomendada de 2 clases por semana (8 clases al mes).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de FAQ -->
+        <section class="seccion-faq" id="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <p class="bajada-seccion">Despejá tus dudas antes de arrancar.</p>
+
+            <div class="contenedor-faq">
+                <!-- Pregunta de ejemplo 1 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Necesito tener guitarra propia para arrancar?
+                        <span class="faq-flecha">▼</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-contenido">
+                            No es obligatorio para las primeras clases. En la academia te prestamos una guitarra para que uses durante la sesión. Sin embargo, para poder practicar y avanzar durante la semana en tu casa, te recomendamos mucho tener o conseguir una lo antes posible.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta de ejemplo 2 (Para que dupliques) -->
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Qué pasa si tengo que faltar a una clase?
+                        <span class="faq-flecha">▼</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-contenido">
+                            Las clases se pueden reprogramar si avisás con al menos 24 horas de anticipación. Si avisás más tarde o no asistís, la clase se computa como dictada de forma irrevocable ya que ese horario queda reservado exclusivamente para vos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="politicas">
             <h3>⚠️ Reglas de Juego claras (Políticas de cancelación)</h3>
             <p>Para mantener la seriedad de la academia y respetar el tiempo de todos, nos manejamos con una sola regla:</p>
@@ -160,13 +222,40 @@
             </div>
             <p class="copyright">© 2026 Sol Séptima. Todos los derechos reservados.</p>
         </div>
-    </footer>
+    </footer class="footer-principal">
 
+    <!-- JAVASCRIPT: Se incluye la función para mostrar insignias y el nuevo script funcional para el acordeón de FAQ -->
     <script>
+        // Función original de las insignias
         function mostrarInsignia(id, titulo, descripcion) {
             document.getElementById('insignia-titulo').innerText = titulo;
             document.getElementById('insignia-desc').innerText = descripcion;
         }
+
+        // NUEVO: JS para el Acordeón de FAQ
+        document.querySelectorAll('.faq-pregunta').forEach(boton => {
+            boton.addEventListener('click', () => {
+                const item = boton.parentElement;
+                
+                // Cierra los otros items abiertos (Opcional, si querés tipo acordeón exclusivo)
+                document.querySelectorAll('.faq-item').forEach(otroItem => {
+                    if (otroItem !== item) {
+                        otroItem.classList.remove('activo');
+                        otroItem.querySelector('.faq-respuesta').style.maxHeight = null;
+                    }
+                });
+
+                // Toggle del item actual
+                item.classList.toggle('activo');
+                const respuesta = item.querySelector('.faq-respuesta');
+
+                if (item.classList.contains('activo')) {
+                    respuesta.style.maxHeight = respuesta.scrollHeight + "px";
+                } else {
+                    respuesta.style.maxHeight = null;
+                }
+            });
+        });
     </script>
 </body>
 </html>

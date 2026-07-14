@@ -16,6 +16,12 @@
     box-sizing: border-box;
 }
 
+/* Scroll suave al hacer click en los enlaces del Nav */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px; /* Evita que el header sticky tape el título al scrollear */
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-principal);
@@ -36,7 +42,7 @@ h1, h2, h3, h4 {
     padding: 40px 20px;
 }
 
-/* --- HEADER PRINCIPAL --- */
+/* --- HEADER PRINCIPAL (Modificado para Nav) --- */
 .header-principal {
     background-color: #ffffff;
     border-bottom: 1px solid var(--borde);
@@ -52,6 +58,8 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .marca {
@@ -73,6 +81,25 @@ h1, h2, h3, h4 {
     letter-spacing: -0.5px;
 }
 
+/* NUEVO: Estilos del Menu de Navegación */
+.nav-principal {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-principal a {
+    text-decoration: none;
+    color: var(--texto-claro);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.nav-principal a:hover {
+    color: var(--color-primario);
+}
+
 .btn-cta-nav {
     display: inline-block;
     background-color: transparent;
@@ -90,6 +117,21 @@ h1, h2, h3, h4 {
 .btn-cta-nav:hover {
     background-color: var(--color-primario);
     color: #ffffff;
+}
+
+/* Responsivo para el header */
+@media (max-width: 680px) {
+    .contenedor-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-principal {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        border-top: 1px solid var(--borde);
+        padding-top: 10px;
+    }
 }
 
 /* --- HERO SECTION --- */
@@ -254,7 +296,7 @@ h1, h2, h3, h4 {
 
 .bajada-seccion {
     color: var(--texto-mutado);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .contenedor-insignias {
@@ -338,7 +380,7 @@ h1, h2, h3, h4 {
     border-bottom: 1px solid var(--borde);
 }
 
-/* --- FOGÓN Y POLÍTICAS --- */
+/* --- FOGÓN --- */
 .destacado-fogon {
     background: linear-gradient(180deg, #fffcf6 0%, #fff3e0 100%);
     border: 1px solid var(--color-secundario);
@@ -361,6 +403,175 @@ h1, h2, h3, h4 {
     margin-bottom: 10px;
 }
 
+/* --- ESTILOS SECCIÓN PRECIOS --- */
+.seccion-precios {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.contenedor-precios {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.tarjeta-precio {
+    background-color: #ffffff;
+    border: 2px solid var(--color-primario);
+    border-radius: 20px;
+    padding: 35px 25px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(255, 159, 28, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-precio:hover {
+    transform: translateY(-5px);
+}
+
+.badge-tarjeta {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primario);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+
+.tarjeta-precio h3 {
+    font-size: 1.4rem;
+    color: var(--texto-claro);
+}
+
+.cant-clases{
+    margin-bottom: 15px;
+}
+
+.precio-grande {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: var(--color-primario);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.precio-grande .unidad {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--texto-mutado);
+}
+
+.precio-clase {
+    font-size: 1.1rem;
+    color: var(--texto-claro);
+    background-color: rgba(255, 159, 28, 0.08);
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.precio-clase strong {
+    color: #e68a00;
+}
+
+.precio-nota {
+    font-size: 0.85rem;
+    color: var(--texto-mutated, var(--texto-mutado));
+}
+
+/* --- ESTILOS SECCIÓN FAQ (Acordeón) --- */
+.seccion-faq {
+    margin: 50px 0;
+    text-align: left; /* Alineado a la izquierda para mejor lectura */
+}
+
+.seccion-faq h2, .seccion-faq .bajada-seccion {
+    text-align: center; /* Mantener encabezados centrados */
+}
+
+.contenedor-faq {
+    max-width: 700px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background-color: var(--bg-secundario);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-pregunta {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #111115;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    transition: color 0.2s ease;
+}
+
+.faq-pregunta:hover {
+    color: var(--color-primario);
+}
+
+.faq-flecha {
+    font-size: 0.8rem;
+    color: var(--texto-mutado);
+    transition: transform 0.3s ease;
+}
+
+/* Elemento de respuesta oculto por defecto, con animación */
+.faq-respuesta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-respuesta-contenido {
+    padding: 0 20px 20px 20px;
+    font-size: 0.95rem;
+    color: var(--texto-mutado);
+    line-height: 1.6;
+}
+
+/* Estilos de activación por clase (manejado en JS) */
+.faq-item.activo {
+    border-color: var(--color-primario);
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(255, 159, 28, 0.05);
+}
+
+.faq-item.activo .faq-flecha {
+    transform: rotate(180deg);
+    color: var(--color-primario);
+}
+
+/* --- POLÍTICAS Y CIERRE --- */
 .politicas {
     background-color: var(--bg-principal);
     border: 1px dashed var(--borde);
@@ -381,7 +592,6 @@ h1, h2, h3, h4 {
     margin-bottom: 10px;
 }
 
-/* --- SECCIÓN CIERRE --- */
 .cierre {
     padding: 40px 0;
 }
