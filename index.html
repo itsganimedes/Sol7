@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol Séptima - Academia de Guitarra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <div class="contenedor-header">
+            <div class="marca">
+                <img src="img/logo_sol7.png" alt="Logo Sol 7" class="logo">
+                <span class="nombre-academia">Sol Séptima</span>
+            </div>
+            <a href="https://wa.me/2645128508?text=Hola!%20Quiero%20inscribirme%20en%20Sol%20Séptima." class="btn-cta-nav" target="_blank">Escribinos</a>
+        </div>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="hero">
+            <div class="tag-alerta">🎸 INSCRIPCIONES ABIERTAS</div>
+            <h1>Aprendé guitarra en un proceso <span>inolvidable.</span></h1>
+            <p class="bajada-hero">Te invitamos a aprender a tocar la guitarra en un proceso divertido. Estableceremos objetivos desde el primer día para que la frustración no sea un problema.</p>
+            
+            <div class="info-clave">
+                <div class="tarjeta-clave">
+                    <h4>📆 Días y horarios</h4>
+                    <p>Lunes a Viernes<br>9hs-17hs (Clase de 1h)</p>
+                </div>
+                <div class="tarjeta-clave">
+                    <h4>📍 Ubicación</h4>
+                    <p>Bib. Popular Héroes Indolatinoamericanos, B° Camus (o) a convenir</p>
+                </div>
+            </div>
+
+            <a href="https://wa.me/2645128508?text=Hola!%20Quiero%20inscribirme%20en%20Sol%20Séptima."class="btn-cta" target="_blank">🎯 Quiero empezar ahora</a>
+        </section>
+
+        <section class="seccion-camada">
+            <h2>¿Cómo son las clases?</h2>
+            <p>Cuando ingreses, establecemos un plan para vos, definimos metas mensuales y caminamos juntos.<strong> Podés cursar todos los meses que quieras y avanzar a tu propio ritmo</strong>, pero cada mes arranca con objetivos claros, una estructura fija y dinámicas grupales.</p>
+        </section>
+
+        <section class="grid-sistema">
+            <div class="bloque-sistema">
+                <h3>⚡ Cómo funciona nuestro Sistema</h3>
+                <ul>
+                    <li><strong>Tu Canción Objetivo:</strong> Al inscribirte, elegís el tema que morís por tocar. Todo tu mes estará enfocado en dominar esa canción.</li>
+                    <li><strong>Sistema de Insignias:</strong> Vas a ir superando desafíos semanales y sumando logros a medida que avances. ¡Vas a ver tu progreso real!</li>
+                    <li><strong>¿No tenés instrumento?:</strong> No te preocupes, en la clase te prestamos una guitarra para que arranques (uso exclusivo durante la sesión).</li>
+                </ul>
+            </div>
+
+            <div class="bloque-sistema">
+                <h3>⏱️ Modalidad y Coordinación</h3>
+                <ul>
+                    <li><strong>Frecuencia:</strong> Hasta 2 clases por semana (Máximo 1 hora por clase).</li>
+                    <li><strong>Días y horarios fijos:</strong> Clases disponibles de lunes a viernes en los horarios de 9hs a 17hs.</li>
+                    <li><strong>Puntos de encuentro:</strong> Clases presenciales en la Biblioteca Popular Héroes Indolatinoamericanos (B° Camus) o directamente a convenir (consultar costo extra por viático a domicilio).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion-insignias">
+            <h2>🏅 Gamificación: Tu Progreso Real</h2>
+            <p class="bajada-seccion">Pasá el mouse para una vista rápida o hacé clic para ver el detalle:</p>
+
+            <div class="contenedor-insignias">
+                <div class="insignia-card" onclick="mostrarInsignia('bienvenida', 'Insignia de Bienvenida', 'Se otorga inmediatamente al completar tu inscripción y definir formalmente tu Canción Objetivo. ¡El primer paso ya está dado!')">
+                    <div class="insignia-icono">🔑</div>
+                    <h4>Bienvenida</h4>
+                    <span class="insignia-tooltip">¡Se destraba al inscribirte y elegir tu canción! 🚀</span>
+                </div>
+                <div class="insignia-card" onclick="mostrarInsignia('callos', 'Callos de Acero', 'Se desbloquea al cumplir las primeras dos semanas de práctica constante. Tus dedos ya se están adaptando al metal de las cuerdas, ¡ya sos un guerrero!')">
+                    <div class="insignia-icono">🛡️</div>
+                    <h4>Callos de Acero</h4>
+                    <span class="insignia-tooltip">Por constancia: 1 mes dándole duro a las cuerdas. 💪</span>
+                </div>
+                <div class="insignia-card" onclick="mostrarInsignia('objetivo', 'Canción Objetivo', 'La insignia máxima del mes. Se te entrega cuando lográs tocar tu canción meta de principio a fin con el ritmo correcto.')">
+                    <div class="insignia-icono">🏆</div>
+                    <h4>Canción Objetivo</h4>
+                    <span class="insignia-tooltip">¡La gloria máxima! Tu tema tocado a la perfección. 🎵</span>
+                </div>
+            </div>
+
+            <div class="insignia-detalle" id="visor-insignia">
+                <h4 id="insignia-titulo" style="color: var(--color-primario); margin-bottom: 5px;">🔑 Insignia de Bienvenida</h4>
+                <p id="insignia-desc" style="font-size: 0.9rem; color: var(--texto-claro);">Se otorga inmediatamente al completar tu inscripción y definir formalmente tu Canción Objetivo. ¡El primer paso ya está dado!</p>
+            </div>
+        </section>
+
+        <section class="destacado-fogon">
+            <span>🔥</span>
+            <h2>El Fogón de Cierre</h2>
+            <p style="margin-top: 10px;">Al finalizar etapas, juntamos a la comunidad de la camada en un encuentro grupal al aire libre. Un espacio relajado para compartir lo aprendido, tocar juntos, tomar algo y vivir la música en comunidad. ¡Aprender no es un camino solitario!</p>
+        </section>
+
+        <section class="politicas">
+            <h3>⚠️ Reglas de Juego claras (Políticas de cancelación)</h3>
+            <p>Para mantener la seriedad de la academia y respetar el tiempo de todos, nos manejamos con una sola regla:</p>
+            <p><strong>Los días y horarios se fijan al momento de la inscripción. Clase cancelada o reprogramada por el alumno con menos de 24 horas de aviso, se computará como dictada de forma irrevocable.</strong></p>
+        </section>
+
+        <section class="cierre">
+            <p><strong>¡No pospongas más tu sueño!</strong></p>
+            <a href="https://wa.me/2645128508?text=Hola!%20Quiero%20inscribirme%20en%20Sol%20Séptima." class="btn-cta" target="_blank">🚀 ¡Vamos a hacer sonar esa guitarra!</a>
+        </section>
+
+    </main>
+
+    <footer class="footer-principal">
+        <div class="contenedor-footer">
+            <div class="marca-footer">
+                <img src="img/logo_sol7.png" alt="Logo Sol 7" class="logo-footer">
+                <span>Sol Séptima</span>
+            </div>
+            <p class="copyright">© 2026 Sol Séptima. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function mostrarInsignia(id, titulo, descripcion) {
+            document.getElementById('insignia-titulo').innerText = titulo;
+            document.getElementById('insignia-desc').innerText = descripcion;
+        }
+    </script>
+</body>
+</html>
