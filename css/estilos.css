@@ -69,8 +69,9 @@ h1, h2, h3, h4 {
 }
 
 .logo {
-    max-height: 85px;
+    max-height: 65px;
     width: auto;
+    margin: 2rem 0;
 }
 
 .nombre-academia {
@@ -117,6 +118,21 @@ h1, h2, h3, h4 {
 .btn-cta-nav:hover {
     background-color: var(--color-primario);
     color: #ffffff;
+}
+
+@media(max-width:1050px) {
+    .logo {
+        max-height: 100px;
+        margin: 1rem 0;
+    }
+
+    .marca {
+        flex-direction: column;
+    }
+
+    .btn-cta-nav{
+        margin-top: 2rem;
+    }
 }
 
 /* Responsivo para el header */
