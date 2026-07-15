@@ -34,8 +34,10 @@
 
         <section class="hero">
             <div class="tag-alerta">🎸 INSCRIPCIONES ABIERTAS</div>
-            <h1>Aprendé guitarra en un proceso <span>hermoso.</span></h1>
-            <p class="bajada-hero">Te invitamos a aprender a tocar la guitarra de una forma estructurada. Estableceremos objetivos desde el primer día para que la frustración no sea un problema.</p>
+            <h1>Guitarra para <span>soñadores.</span></h1>
+            <p class="bajada-hero">
+                <strong>¿Edad avanzada? ¿Nunca tocaste una nota? No importa.</strong> Te invitamos a cumplir ese viejo anhelo que siempre postergaste. Traé esa guitarra que juntaba tierra en tu casa: acá la convertimos en tu mejor compañera para que en la próxima reunión familiar o con amigos, las canciones salgan de <strong>tus propias manos</strong>.
+            </p>
             
             <div class="info-clave">
                 <div class="tarjeta-clave">
@@ -80,7 +82,7 @@
         <!-- Agregado id="insignias" para el anclaje -->
         <section class="seccion-insignias" id="insignias">
             <h2>🏅 Gamificación: Tu Progreso Real</h2>
-            <p class="bajada-seccion">Pasá el mouse para una vista rápida o hacé clic para ver el detalle:</p>
+            <p class="bajada-seccion">Pasá el mouse para una vista rápida o hacé clic para ver el detalle (abajo):</p>
 
             <div class="contenedor-insignias">
                 <div class="insignia-card" onclick="mostrarInsignia('bienvenida', 'Insignia de Bienvenida', 'Se otorga inmediatamente al completar tu inscripción y definir formalmente tu Canción Objetivo. ¡El primer paso ya está dado!')">
@@ -153,16 +155,42 @@
         <!-- Sección de Precio Actual -->
         <section class="seccion-precios" id="precios">
             <h2>Tarifa e Inversión</h2>
-            <p class="bajada-seccion">Sin sorpresas ni contratos raros. Pagás por mes y avanzás a tu ritmo.</p>
+            <p class="bajada-seccion">Sin sorpresas ni contratos raros. Pagás como más te convenga y avanzás a tu ritmo.</p>
             
             <div class="contenedor-precios">
+
                 <div class="tarjeta-precio">
-                    <span class="badge-tarjeta">PLAN COMPLETO</span>
+                    <h3>Pase Particular</h3>
+                    <p class="cant-clases"><strong>12 CLASES</strong> MAX</p>
+                    <div class="precio-grande">$5.990 <span class="unidad"><br>/ hora</span></div>
+                    <div class="precio-clase">Hasta <strong>3 clases</strong> semanales</div>
+                    <p class="precio-nota">Plan para personas que no estén seguras de poder asistir de forma constante a las clases semanales.</p>
+                    
+                    <!-- Link delicado a WhatsApp -->
+                    <a href="https://wa.me/2645128508?text=Hola!%20Quiero%20elegir%20el%20Pase%20Particular%20de%20Sol%20S%C3%A9ptima" class="btn-elegir-plan" target="_blank">Elegir plan →</a>
+                </div>
+
+                <div class="tarjeta-precio bordered">
+                    <span class="badge-tarjeta">MÁS ELEGIDO</span>
                     <h3>Pase Mensual</h3>
+                    <p class="cant-clases"><strong>4 CLASES</strong> MAX</p>
+                    <div class="precio-grande">$21.990 <span class="unidad"><br>/ mes</span></div>
+                    <div class="precio-clase">Hasta <strong>3 clases</strong> semanales</div>
+                    <p class="precio-nota">Plan para personas que no estén seguras de poder asistir de forma constante a las clases semanales.</p>
+                    
+                    <!-- Link delicado a WhatsApp -->
+                    <a href="https://wa.me/2645128508?text=Hola!%20Quiero%20elegir%20el%20Pase%20Mensual%20de%20Sol%20S%C3%A9ptima" class="btn-elegir-plan" target="_blank">Elegir plan →</a>
+                </div>
+
+                <div class="tarjeta-precio">
+                    <h3>Pase Veloz</h3>
                     <p class="cant-clases"><strong>8 CLASES</strong> MAX</p>
-                    <div class="precio-grande">$29.990 <span class="unidad">/ mes</span></div>
-                    <div class="precio-clase">Equivale a solo <strong>$3.748</strong> por clase</div>
+                    <div class="precio-grande">$39.990 <span class="unidad"><br>/ mes</span></div>
+                    <div class="precio-clase">Equivale a <strong>$4.998</strong> por clase</div>
                     <p class="precio-nota">Calculado en base a una frecuencia recomendada de 2 clases por semana (8 clases al mes).</p>
+                    
+                    <!-- Link delicado a WhatsApp -->
+                    <a href="https://wa.me/2645128508?text=Hola!%20Quiero%20elegir%20el%20Pase%20Mensual%20de%20Sol%20S%C3%A9ptima" class="btn-elegir-plan" target="_blank">Elegir plan →</a>
                 </div>
             </div>
         </section>
@@ -173,7 +201,6 @@
             <p class="bajada-seccion">Despejá tus dudas antes de arrancar.</p>
 
             <div class="contenedor-faq">
-                <!-- Pregunta de ejemplo 1 -->
                 <div class="faq-item">
                     <button class="faq-pregunta">
                         ¿Necesito tener guitarra propia para arrancar?
@@ -186,15 +213,75 @@
                     </div>
                 </div>
 
-                <!-- Pregunta de ejemplo 2 (Para que dupliques) -->
                 <div class="faq-item">
                     <button class="faq-pregunta">
-                        ¿Qué pasa si tengo que faltar a una clase?
+                        ¿Necesito tener conocimiento previo?
                         <span class="faq-flecha">▼</span>
                     </button>
                     <div class="faq-respuesta">
                         <div class="faq-respuesta-contenido">
-                            Las clases se pueden reprogramar si avisás con al menos 24 horas de anticipación. Si avisás más tarde o no asistís, la clase se computa como dictada de forma irrevocable ya que ese horario queda reservado exclusivamente para vos.
+                            De forma directa: <strong>no</strong>. No necesitás conocer sobre teoría musical o tener práctica previa para aprender, ya que las clases están diseñadas específicamente para principiantes, de forma que te sea cómodo todo el proceso.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Cuánto duran las clases a qué horarios se dan?
+                        <span class="faq-flecha">▼</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-contenido">
+                            Una clase dura <strong>1 hora</strong> y puede tener pequeñas variaciones, y los horarios son de <strong>9 a.m. a 17 p.m.</strong>, a elección tuya, siempre y cuando el horario este disponible y no lleno.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Dónde se dictan las clases?
+                        <span class="faq-flecha">▼</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-contenido">
+                            Como sede principal, se realizan en <strong>la Biblioteca Popular Héroes Indolatinoamericanos (B° Camus, Rivadavia)</strong> los días <strong>lunes, miércoles y viernes</strong>, y los días <strong>martes y jueves</strong> se realizan en el <strong>Parque de Mayo</strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Cuándo se que terminé?
+                        <span class="faq-flecha">▼</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-contenido">
+                            Cuando el/los profesor/es consideren que has alcanzado un punto avanzado con tu instrumento, habiendo superado las etapas de la ruta de aprendizaje, conseguido insignias y demostrado tu aprendizaje, <strong>se te otorgará un diploma (no formal)</strong> como certificado de finalización de tu proceso. A partir de ese momento, es tu decisión seguir asistiendo para compartir las clases.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Cuánto puedo tardar en aprender?
+                        <span class="faq-flecha">▼</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-contenido">
+                            <strong>No hay una duración exacta</strong> para que aprendas a tocar, dado que cada persona tiene su propio ritmo y nosotros nos adaptamos a eso, sin presiones, sin apuros. Como promedio, podés tardar de<strong> 3 a 6 meses</strong> en alcanzar un buen nivel con el instrumento.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta">
+                        ¿Aprendo solo o en grupo?
+                        <span class="faq-flecha">▼</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-contenido">
+                            Como prefieras: si querés aprender de forma <strong>individual</strong>, coordinaremos clases particulares solo con vos. Si preferís con <strong>otras personas</strong>, podés asistir a las clases grupales dictadas (como sede principal) en la biblioteca.
                         </div>
                     </div>
                 </div>

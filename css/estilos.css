@@ -301,18 +301,32 @@ h1, h2, h3, h4 {
 
 .contenedor-insignias {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+@media (min-width: 600px) {
+    .contenedor-insignias {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
 }
 
 .insignia-card {
     background-color: var(--bg-secundario);
-    padding: 20px 10px;
+    padding: 15px 8px;
     border-radius: 12px;
     border: 1px solid var(--borde);
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 600px) {
+    .insignia-card {
+        padding: 20px 10px;
+    }
 }
 
 .insignia-card:hover {
@@ -322,53 +336,73 @@ h1, h2, h3, h4 {
 }
 
 .insignia-icono {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+@media (min-width: 600px) {
+    .insignia-icono {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
 }
 
 .insignia-card h4 {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     margin-bottom: 5px;
 }
 
-/* Tooltip */
+@media (min-width: 600px) {
+    .insignia-card h4 {
+        font-size: 0.95rem;
+    }
+}
+
+/* --- TOOLTIP --- */
 .insignia-tooltip {
-    visibility: hidden;
-    opacity: 0;
-    width: 200px;
-    background-color: #1e1e24;
-    color: #ffffff;
-    text-align: center;
-    border-radius: 8px;
-    padding: 10px;
-    border: 1px solid var(--color-primario);
-    font-size: 0.8rem;
-    position: absolute;
-    z-index: 10;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: opacity 0.3s, visibility 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: none;
 }
 
-.insignia-tooltip::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: var(--color-primario) transparent transparent transparent;
+@media (min-width: 900px) and (hover: hover) {
+    .insignia-tooltip {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        width: 200px;
+        background-color: #1e1e24;
+        color: #ffffff;
+        text-align: center;
+        border-radius: 8px;
+        padding: 10px;
+        border: 1px solid var(--color-primario);
+        font-size: 0.8rem;
+        position: absolute;
+        z-index: 10;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: opacity 0.3s, visibility 0.3s;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .insignia-tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: var(--color-primario) transparent transparent transparent;
+    }
+
+    .insignia-card:hover .insignia-tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
-.insignia-card:hover .insignia-tooltip {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Visor inferior */
+/* --- VISOR INFERIOR --- */
 .insignia-detalle {
     margin-top: 20px;
     background-color: var(--bg-secundario);
@@ -378,6 +412,7 @@ h1, h2, h3, h4 {
     border-left: 1px solid var(--borde);
     border-right: 1px solid var(--borde);
     border-bottom: 1px solid var(--borde);
+    text-align: center;
 }
 
 /* --- FOGÓN --- */
@@ -411,13 +446,15 @@ h1, h2, h3, h4 {
 
 .contenedor-precios {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     margin-top: 30px;
+    gap: 2rem;
 }
 
 .tarjeta-precio {
     background-color: #ffffff;
-    border: 2px solid var(--color-primario);
+    border: 2px solid var(--borde);
     border-radius: 20px;
     padding: 35px 25px;
     width: 100%;
@@ -425,6 +462,10 @@ h1, h2, h3, h4 {
     box-shadow: 0 10px 30px rgba(255, 159, 28, 0.1);
     position: relative;
     transition: transform 0.3s ease;
+}
+
+.bordered {
+    border: 2px solid var(--color-primario);
 }
 
 .tarjeta-precio:hover {
@@ -488,6 +529,36 @@ h1, h2, h3, h4 {
 .precio-nota {
     font-size: 0.85rem;
     color: var(--texto-mutated, var(--texto-mutado));
+}
+
+.btn-elegir-plan {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-elegir-plan:hover {
+    text-decoration: underline;
+    transform: translateX(3px); /* Hace un leve movimiento hacia la derecha al pasar el mouse */
+}
+
+@media (max-width: 1050px) {
+    .contenedor-precios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta-precio {
+        width: 80%;
+    }
+
+    .precio-grande{
+        font-size: 2rem;
+    }
 }
 
 /* --- ESTILOS SECCIÓN FAQ (Acordeón) --- */
